@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container text-light">
+        <h2>@ViewBag.Detail.Name</h2>
+        <div class="row">
+            <div class="col mb-3">
+                <h5>Gallery:</h5>
+                @foreach (var img in ViewBag.Images)
+                {
+                    <img src="@img.Path" width="200" height="200" class="rounded" />
+                }
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <h4>Description:</h4>
+                <p>@ViewBag.Detail.Description</p>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h4>Time of adventure: </h4>
+                    <i class="far fa-clock"></i>
+                    <span class="spanIn">@ViewBag.Detail.Time</span>
+                </div>
+                <div class="col-3">
+                    <h4>Number of players:</h4>
+                    <i class="fas fa-sort-numeric-up-alt"></i>
+                    <span class="spanIn">@ViewBag.Detail.NumberPlayers</span>
+                </div>
+                <div class="col-3">
+                    <h4>Minimum age:</h4>
+                    <i class="fas fa-user-injured"></i>
+                    <span class="spanIn">@ViewBag.Detail.MinAge</span>
+                </div>
+            </div>
+
+        </div>
+    </div>

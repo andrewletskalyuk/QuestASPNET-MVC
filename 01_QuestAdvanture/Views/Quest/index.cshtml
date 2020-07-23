@@ -1,0 +1,43 @@
+﻿@using _01_QuestAdvanture.Models;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; //наш макет
+}
+
+
+<h3 class="text-light">Which quests we can propose You</h3>
+<div class="container text-light">
+    <div class="row mb-2">
+        @foreach (QuestRoom questRoom in ViewBag.QuestRooms)
+        {
+            <div class="container quest pb-2">
+                <h3 class="mt-2 text-danger text-uppercase">Quest: @questRoom.Name</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-8 mb-3">
+                        <h5>Gallery:</h5>
+                        @foreach (Images img in questRoom.Images)
+                        {
+                            <img src="@img.Path" width="120" height="120" class="rounded" />
+                        }
+                    </div>
+                    <div class="col-4">
+                        <h5>A few words about quest: </h5>
+                        <p>@questRoom.Description</p>
+                        <div class="d-flex justify-content-start">
+                            <i class="fas fa-stopwatch pr-2"></i>
+                            <p>Time in advanture: </p>
+                            <h5 class="pl-1">@questRoom.Time</h5>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <i class="fas fa-level-up-alt pr-2"></i>
+                            <p>Min Number of players: </p>
+                            <h5 class="pl-1">@questRoom.NumberPlayers</h5>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="seeDetails(@questRoom.Id)">View more Details</button>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

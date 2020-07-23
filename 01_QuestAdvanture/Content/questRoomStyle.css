@@ -1,0 +1,51 @@
+﻿* {
+    font-family: 'Grenze Gotisch', cursive;
+}
+
+
+.intro-2 {
+    /*background: url("https://psmedia.playstation.com/is/image/psmedia/assassins-creed-valhalla-screen-04-ps4-en-22apr20_1587566433844?$Icon$")no-repeat center center;*/
+    background: url("https://i2hard.ru/upload/iblock/a7d/a7d51f85be5f91b454cdf65fad12a0e7.jpg")no-repeat center center;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4285F4;
+    }
+}
+
+html,
+body,
+.view {
+    height: 100%;
+}
+
+.myFirst{
+    padding-top: 150px;
+}
+
+p,i {
+    color:white;
+    font-size:20px;
+}
+.quest {
+    border: 1px solid yellow;
+    border-radius: 5px;
+
+}
+button {
+    font-size: x-large;
+}
+span{
+    font-size: 50px !important;
+}
